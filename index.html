@@ -26,5 +26,27 @@
       function aVeryBigSum(ar) { let sum =ar.reduce((a, b) => a + b, 0); return
       sum; }
     </p>
+
+    <h4>Question</h4>
+    <p>
+      Given a square matrix, calculate the absolute difference between the sums
+      of its diagonals. For example, the square matrix is shown below: 1 2 3 4 5
+      6 9 8 9 The left-to-right diagonal = . The right to left diagonal = .
+      Their absolute difference is . Function description Complete the function
+      in the editor below. diagonalDifference takes the following parameter: int
+      arr[n][m]: an array of integers Return int: the absolute diagonal
+      difference
+    </p>
+
+    <h4>Answer</h4>
+    <p>
+      function diagonalDifference(arr) { // Write your code here // write a for
+      loop to caculate the index of the array at 0, 4, 8 // write another for
+      loop to caculate the index of array at 2, 4, 6 // take the absolute value
+      from obth with Math.abs let n = arr.length; let dig1 = 0; let dig2 = 0;
+      for (let i = 0; i < n; i++) { for(let j = 0; j < n; j++) { if(i === j) {
+      dig1 += arr[i][j]; } if( i + j === n -1 ) { dig2 += arr[i][j]; } } }
+      return Math.abs(dig1 - dig2); }
+    </p>
   </body>
 </html>
